@@ -10,6 +10,24 @@ getRandomUser();
 getRandomUser();
 let data = [];
 
+//LocalStorage 
+let persona = [{
+    nombre: prompt('Cual es tu nombre?'),
+    apellido: prompt('Cual es tu apellido'),
+    edad: prompt('Cuantos años tenes?')
+    
+}];
+localStorage.setItem('usuario',JSON.stringify(persona));
+const usuario = JSON.parse(localStorage.getItem('usuario'));
+
+usuario.forEach( element => {
+    let elements = document.getElementById('elements');
+    let div = document.createElement('div');
+    div.innerHTML = `<strong>${element.nombre}</strong> esta <span>conectado</span>`;
+    elements.appendChild(div);
+});
+
+
 // api para un randomizador de usuarios y dinero
 
 async function getRandomUser() {
