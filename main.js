@@ -13,7 +13,7 @@ let data = [];
 //LocalStorage 
 let persona = [{
     nombre: prompt('Cual es tu nombre?'),
-    apellido: prompt('Cual es tu apellido'),
+    apellido: prompt('Cual es tu apellido?'),
     edad: prompt('Cuantos años tenes?')
     
 }];
